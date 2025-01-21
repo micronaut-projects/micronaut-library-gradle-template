@@ -1,4 +1,6 @@
 [versions]
+micronaut="4.7.4"
+
 # Gradle plugins
 graalvm-native-buildtools = "0.10.4"
 micronaut-gradle-plugin = "4.4.5"
