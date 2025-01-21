@@ -1,6 +1,6 @@
 rootProject.name = "MicronautLibrary"
 
-include("bootstrap")
+include("example-micronaut-lib")
 include("code-coverage-report")
 
 val micronautVersion: String by settings

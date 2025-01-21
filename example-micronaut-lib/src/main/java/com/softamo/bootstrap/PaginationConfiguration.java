@@ -15,18 +15,6 @@
  */
 package com.softamo.bootstrap;
 
-import io.micronaut.core.annotation.Introspected;
-import io.micronaut.core.annotation.Nullable;
-import io.micronaut.views.fields.messages.Message;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
-
-@Introspected
-public record Breadcrumb(
-        @NotNull @Valid Message label,
-                         @Nullable String href) {
-    public Breadcrumb(Message label) {
-        this(label, null);
-    }
+public interface PaginationConfiguration {
+    Integer getMaxNumberOfPages();
 }
-

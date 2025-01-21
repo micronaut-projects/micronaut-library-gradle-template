@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-    jacocoAggregation(project(":bootstrap"))
+    jacocoAggregation(project(":example-micronaut-lib"))
 }
 
 reporting {
