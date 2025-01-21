@@ -6,19 +6,39 @@
 
 This template assumes you want to write a Java Library compatible with Java 17 and uses [Micronaut JUnit 5](https://micronaut-projects.github.io/micronaut-test/4.6.2/guide/#junit5) for testing. 
 
+## Library Configuration
+
+Modify `gradle.properties`. Change `TODO` items with your project details.
+
+### Micronaut Version
+
+You define the version of [Micronaut Platform](https://micronaut-projects.github.io/micronaut-platform/latest/guide/) in `micronautVersion` in `gradle.properties`.
+
+## Example
+
+This repository contains a module named `example-micronaut-lib`. It is an example of a Micronaut library which exposes introspected classes, a `@Singleton` `PaginationFactory` and configuration bean `PaginationConfiguration` with a default value defined in `PaginationConfigurationProperties`.
+
+`example-micronaut-lib/build.gradle.kts` show you can simply apply the internal plugin `io.micronaut.library.maven-publish` or the `io.micronaut.library.maven-java-library` plugin, if you don't whish to publish to  Sonatype OSSRH. It applies `checkstyle`, `spotless`, `JaCoCo`, and GraalVM Native Image plugins.
+
 ## Micronaut Platform Gradle Version Catalogue
 
-This template applies the [Micronaut Version Catalogue](https://micronaut-projects.github.io/micronaut-platform/latest/guide) in root `settings.gradle.kts`. 
+This template applies the [Micronaut Version Catalogue](https://micronaut-projects.github.io/micronaut-platform/latest/guide) in root `settings.gradle.kts`.
+
+`example-micronaut-lib/build.gradle.kts`show how to use the Micronaut Platform version Catalogue.
 
 ## License Management
 
 This template uses the [Spotless Gradle Plugin](https://github.com/diffplug/spotless) to ensure every file contains a license matching the template in `config/spotless.license.java`.
 
+## Checkstyle
+
+The template applies the [Checkstyle Gradle Plugin](https://docs.gradle.org/current/userguide/checkstyle_plugin.html). You can configure it with `config/checkstyle/checkstyle.xml` and `config/checkstyle/supressions.xml`
+
 ## Code Coverage
 
 The template applies the [JaCoCo Gradle Plugin](https://docs.gradle.org/current/userguide/jacoco_plugin.html) to get code coverage and the [JaCoCo report Aggregation Plugin](https://docs.gradle.org/current/userguide/jacoco_report_aggregation_plugin.html). 
 
-Run `./gradlew testCodeCoverageReport` and you can access the HTML report ` open code-coverage-report/build/reports/jacoco/testCodeCoverageReport/html/index.html`.
+Run `./gradlew testCodeCoverageReport` and you can access the HTML report `open code-coverage-report/build/reports/jacoco/testCodeCoverageReport/html/index.html`.
 
 ## GraalVM Native Image
 
