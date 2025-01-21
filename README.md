@@ -49,9 +49,9 @@ signing.password=YouPublicKeyPassword
 signing.secretKeyRingFile=PathToYourKeyRingFile
 ```
 
-<1> The public key ID (The last 8 symbols of the keyId. You can use `gpg -K --keyid-format short` to get it).
-<2> The passphrase used to protect your private key.
-<3> The absolute path to the secret key ring file containing your private key. (Since gpg 2.1, you need to export the keys with command `gpg --keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg`).
+<1> The public key ID (The last 8 symbols of the keyId. You can use `gpg -K --keyid-format short` to get it).  
+<2> The passphrase used to protect your private key.  
+<3> The absolute path to the secret key ring file containing your private key. (Since gpg 2.1, you need to export the keys with command `gpg --keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg`).  
 
 ### Publish Release to Sonatype OSSRH
 
