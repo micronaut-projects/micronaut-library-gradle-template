@@ -3,12 +3,7 @@ plugins {
     `maven-publish` // https://docs.gradle.org/current/userguide/publishing_maven.html
     signing // https://docs.gradle.org/current/userguide/signing_plugin.html
 }
-java {
-    withJavadocJar()
-    withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
+
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {

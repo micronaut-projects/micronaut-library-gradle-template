@@ -2,14 +2,11 @@ plugins {
     checkstyle // https://docs.gradle.org/current/userguide/checkstyle_plugin.html
     jacoco
     id("com.diffplug.spotless")
-    id("org.graalvm.buildtools.native")
+    id("io.micronaut.java-base")
     id("io.micronaut.library")
 }
-group = project.findProperty("mavenGroup") as String
-version = project.findProperty("projectVersion") as String
-repositories {
-    mavenCentral()
-}
+
+
 val micronautVersion: String by project
 micronaut {
     version.set(micronautVersion)
