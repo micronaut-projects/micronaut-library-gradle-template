@@ -13,21 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.softamo.bootstrap;
+package example.micronaut.bootstrap;
 
+import io.micronaut.core.annotation.Introspected;
 import io.micronaut.core.annotation.Nullable;
-import io.micronaut.data.annotation.GeneratedValue;
-import io.micronaut.data.annotation.Id;
-import io.micronaut.data.annotation.MappedEntity;
-import jakarta.validation.constraints.NotBlank;
+import io.micronaut.views.fields.messages.Message;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 /**
- *
- * @param id primary Key
- * @param version Release version
+ * Breadcrumb.
+ * @see <a href="https://getbootstrap.com/docs/5.3/components/breadcrumb/">Breadcrumb</a>
+ * @param label Breadcrumb Label
+ * @param href Breadcrumb link
  */
-@MappedEntity("release")
-public record GitHubRelease(
-            @Id @GeneratedValue @Nullable Long id,
-            @NotBlank String version) {
+@Introspected
+public record Breadcrumb(
+        @NotNull @Valid Message label,
+        @Nullable String href
+) {
+    public Breadcrumb(Message label) {
+        this(label, null);
+    }
 }
+

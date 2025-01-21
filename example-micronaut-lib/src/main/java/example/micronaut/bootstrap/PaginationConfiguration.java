@@ -13,18 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.softamo.bootstrap;
+package example.micronaut.bootstrap;
 
 /**
- * @see <a href="https://getbootstrap.com/docs/5.3/components/alerts/">Alerts</a>
+ * Pagination configuration.
  */
-public enum AlertVariant {
-    PRIMARY,
-    SECONDARY,
-    SUCCESS,
-    DANGER,
-    WARNING,
-    INFO,
-    LIGHT,
-    DARK
+public interface PaginationConfiguration {
+    /**
+     *
+     * @return Max Number of Pagination Pages.
+     */
+    Integer getMaxNumberOfPages();
 }

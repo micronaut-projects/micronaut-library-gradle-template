@@ -13,19 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.softamo.bootstrap;
+package example.micronaut.bootstrap;
 
+import io.micronaut.core.annotation.Nullable;
+import io.micronaut.data.annotation.GeneratedValue;
+import io.micronaut.data.annotation.Id;
+import io.micronaut.data.annotation.MappedEntity;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
 
 /**
  *
- * @param active Whether the page item is active.
- * @param href Page link
- * @param pageNumber Page number
+ * @param id primary Key
+ * @param version Release version
  */
-public record PageItem(boolean active,
-                       @NotBlank String href,
-                       @NotNull @Positive Integer pageNumber) {
+@MappedEntity("release")
+public record GitHubRelease(
+            @Id @GeneratedValue @Nullable Long id,
+            @NotBlank String version) {
 }

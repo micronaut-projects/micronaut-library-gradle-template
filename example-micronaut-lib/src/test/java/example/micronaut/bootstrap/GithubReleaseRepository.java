@@ -13,15 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.softamo.bootstrap;
+package example.micronaut.bootstrap;
+
+import io.micronaut.context.annotation.Requires;
+import io.micronaut.data.jdbc.annotation.JdbcRepository;
+import io.micronaut.data.model.query.builder.sql.Dialect;
+import io.micronaut.data.repository.PageableRepository;
 
 /**
- * Pagination configuration.
+ * Crud repository.
  */
-public interface PaginationConfiguration {
-    /**
-     *
-     * @return Max Number of Pagination Pages.
-     */
-    Integer getMaxNumberOfPages();
+@Requires(property = "spec.name", value = "GithubReleaseControllerTest")
+@JdbcRepository(dialect = Dialect.H2)
+public interface GithubReleaseRepository extends PageableRepository<GitHubRelease, Long> {
 }

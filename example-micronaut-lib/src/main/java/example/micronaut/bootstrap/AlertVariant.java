@@ -13,17 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.softamo.bootstrap;
-
-import io.micronaut.context.annotation.Requires;
-import io.micronaut.data.jdbc.annotation.JdbcRepository;
-import io.micronaut.data.model.query.builder.sql.Dialect;
-import io.micronaut.data.repository.PageableRepository;
+package example.micronaut.bootstrap;
 
 /**
- * Crud repository.
+ * @see <a href="https://getbootstrap.com/docs/5.3/components/alerts/">Alerts</a>
  */
-@Requires(property = "spec.name", value = "GithubReleaseControllerTest")
-@JdbcRepository(dialect = Dialect.H2)
-public interface GithubReleaseRepository extends PageableRepository<GitHubRelease, Long> {
+public enum AlertVariant {
+    PRIMARY,
+    SECONDARY,
+    SUCCESS,
+    DANGER,
+    WARNING,
+    INFO,
+    LIGHT,
+    DARK
 }
