@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: graalvm/setup-graalvm@v1.2.6
+      - uses: graalvm/setup-graalvm@v1.2.6 # https://github.com/graalvm/setup-graalvm
         with:
           java-version: '21'
           distribution: 'graalvm'
@@ -20,6 +20,6 @@ jobs:
           java --version
           native-image --version
       - name: Native Compile
-        run: gradlew nativeCompile
+        run: ./gradlew nativeCompile
       - name: Native Test
-        run: gradlew nativeCompile
+        run: ./gradlew nativeCompile
