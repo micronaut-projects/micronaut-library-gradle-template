@@ -1,5 +1,6 @@
 plugins {
     `java-library`
+    checkstyle // https://docs.gradle.org/current/userguide/checkstyle_plugin.html
     jacoco
     id("com.diffplug.spotless")
     id("org.graalvm.buildtools.native")

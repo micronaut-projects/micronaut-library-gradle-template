@@ -46,6 +46,9 @@ class GithubReleaseController {
     Map<String, Object> index(Pageable pageable) {
         Page<GitHubRelease> page = repository.findAll(pageable);
         Pagination pagination = paginationFactory.create(page, i -> UriBuilder.of("/").queryParam("page", "" + i).queryParam("size", page.getSize()));
-        return Map.of("pagination", pagination,"releases", page.getContent());
+        return Map.of(
+                "pagination", pagination,
+                "releases", page.getContent()
+        );
     }
 }

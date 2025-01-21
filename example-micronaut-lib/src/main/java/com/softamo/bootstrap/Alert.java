@@ -22,13 +22,23 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
+ * Alert component.
  * @see <a href="https://getbootstrap.com/docs/5.3/components/alerts/">Alerts</a>
+ * @param message Alert Message
+ * @param variant Alert variant
+ * @param dismissible Whether the alert is dismissible or not.
  */
 @Serdeable
 public record Alert(@NonNull @NotNull @Valid Message message,
                     @NonNull @NotNull AlertVariant variant,
                     boolean dismissible) {
 
+    /**
+     *
+     * @param defaultMessage Default Message
+     * @param variant Alert variant
+     * @param dismissible Whether the alert is dismissible or not.
+     */
     public Alert(@NonNull String defaultMessage,
                  @NonNull AlertVariant variant,
                  boolean dismissible) {

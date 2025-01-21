@@ -17,6 +17,9 @@ package com.softamo.bootstrap;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
 
+/**
+ * {@link ConfigurationProperties} implementation of {@link PaginationConfiguration}.
+ */
 @ConfigurationProperties("bootstrap.pagination")
 public class PaginationConfigurationProperties implements PaginationConfiguration {
     private static final Integer DEFAULT_MAX_NUMBER_OF_PAGES = 5;
@@ -27,6 +30,10 @@ public class PaginationConfigurationProperties implements PaginationConfiguratio
         return maxNumberOfPages;
     }
 
+    /**
+     *
+     * @param maxNumberOfPages Max Number of Pagination Pages.
+     */
     public void setMaxNumberOfPages(Integer maxNumberOfPages) {
         this.maxNumberOfPages = maxNumberOfPages;
     }

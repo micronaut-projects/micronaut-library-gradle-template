@@ -62,7 +62,5 @@ class GithubReleaseControllerTest {
         assertTrue(html.contains(">13</a></li>"));
         assertFalse(html.contains("<span aria-hidden=\"true\">&raquo;</span>"));
         assertTrue(html.contains("<span aria-hidden=\"true\">&laquo;</span>"));
-
     }
-
 }

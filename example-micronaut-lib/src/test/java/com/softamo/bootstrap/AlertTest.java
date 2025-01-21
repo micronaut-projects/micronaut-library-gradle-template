@@ -41,5 +41,4 @@ class AlertTest {
     void alertIsAnnotatedWithSerdeableSerializable(SerdeIntrospections serdeIntrospections) {
         assertDoesNotThrow(() -> serdeIntrospections.getSerializableIntrospection(Argument.of(Alert.class)));
     }
-
 }

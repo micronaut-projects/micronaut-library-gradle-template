@@ -19,9 +19,11 @@ import io.micronaut.data.model.Page;
 import io.micronaut.http.uri.UriBuilder;
 import jakarta.inject.Singleton;
 
-import java.net.URI;
 import java.util.function.Function;
 
+/**
+ * Factory class to create {@link Pagination} instances.
+ */
 @Singleton
 public class PaginationFactory {
     private final PaginationConfiguration paginationConfiguration;

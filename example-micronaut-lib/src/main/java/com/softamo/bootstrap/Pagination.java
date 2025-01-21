@@ -21,6 +21,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
+/**
+ * Pagination to indicate a series of related content exists across multiple pages.
+ * @see <a href="https://getbootstrap.com/docs/5.3/components/pagination/">Bootstrap Pagination</a>
+ */
 public class Pagination {
     @Nullable
     private PageItem previous;
@@ -28,16 +32,22 @@ public class Pagination {
     @Nullable
     private PageItem next;
 
-    int totalPages;
-
     private List<PageItem> items = new ArrayList<>();
 
+    /**
+     *
+     * @param total Total number of results
+     * @param offset Result Offset
+     * @param size Size
+     * @param maxPages Max number of pages in pagination.
+     * @param uriFunction Function to generate a {@link UriBuilder} given a page number.
+     */
     public Pagination(long total,
                       int offset,
                       int size,
                       int maxPages,
                       Function<Integer, UriBuilder> uriFunction) {
-        this.totalPages = (int) Math.ceil((double) total / size);
+        int totalPages = (int) Math.ceil((double) total / size);
         int currentPage = (offset + size) / size;
         if ((offset - size) < 0) {
             previous = null;
@@ -62,15 +72,27 @@ public class Pagination {
         }
     }
 
+    /**
+     *
+     * @return Pagination Items
+     */
     public List<PageItem> getItems() {
         return items;
     }
 
+    /**
+     *
+     * @return Previous page
+     */
     @Nullable
     public PageItem getPrevious() {
         return previous;
     }
 
+    /**
+     *
+     * @return Next Page
+     */
     @Nullable
     public PageItem getNext() {
         return next;

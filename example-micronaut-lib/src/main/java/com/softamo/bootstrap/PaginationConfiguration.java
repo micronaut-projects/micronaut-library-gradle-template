@@ -15,6 +15,13 @@
  */
 package com.softamo.bootstrap;
 
+/**
+ * Pagination configuration.
+ */
 public interface PaginationConfiguration {
+    /**
+     *
+     * @return Max Number of Pagination Pages.
+     */
     Integer getMaxNumberOfPages();
 }

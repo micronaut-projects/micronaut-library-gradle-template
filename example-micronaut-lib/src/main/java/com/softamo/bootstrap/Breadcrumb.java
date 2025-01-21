@@ -21,6 +21,12 @@ import io.micronaut.views.fields.messages.Message;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
+/**
+ * Breadcrumb.
+ * @see <a href="https://getbootstrap.com/docs/5.3/components/breadcrumb/">Breadcrumb</a>
+ * @param label Breadcrumb Label
+ * @param href Breadcrumb link
+ */
 @Introspected
 public record Breadcrumb(
         @NotNull @Valid Message label,

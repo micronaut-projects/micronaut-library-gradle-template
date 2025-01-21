@@ -19,6 +19,12 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
+/**
+ *
+ * @param active Whether the page item is active.
+ * @param href Page link
+ * @param pageNumber Page number
+ */
 public record PageItem(boolean active,
                        @NotBlank String href,
                        @NotNull @Positive Integer pageNumber) {

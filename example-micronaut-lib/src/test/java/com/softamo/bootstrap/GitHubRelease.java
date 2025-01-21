@@ -21,6 +21,11 @@ import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
 import jakarta.validation.constraints.NotBlank;
 
+/**
+ *
+ * @param id primary Key
+ * @param version Release version
+ */
 @MappedEntity("release")
 public record GitHubRelease(
             @Id @GeneratedValue @Nullable Long id,
