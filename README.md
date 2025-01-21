@@ -1,6 +1,14 @@
 # Micronaut Library Gradle Template
 [GitHub Repository Template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) to create a [Micronaut](https://micronaut.io) library with a Gradle Build
 
+## Language and Test Framework
+
+This template assumes you want to write a Java Library compatible with Java 17 and uses [Micronaut JUnit 5](https://micronaut-projects.github.io/micronaut-test/4.6.2/guide/#junit5) for testing. 
+
+## Micronaut Platform Gradle Version Catalogue
+
+This template applies the [Micronaut Version Catalogue](https://micronaut-projects.github.io/micronaut-platform/latest/guide) in root `settings.gradle.kts`. 
+
 ## License Management
 
 This template uses the [Spotless Gradle Plugin](https://github.com/diffplug/spotless) to ensure every file contains a license matching the template in `config/spotless.license.java`.
