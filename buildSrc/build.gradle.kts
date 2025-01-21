@@ -8,6 +8,7 @@ repositories {
     mavenCentral()
 }
 dependencies {
+    implementation(libs.gradle.micronaut)
     implementation(libs.spotless)
     implementation(libs.graalvm.native.buildtools)
 }

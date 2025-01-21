@@ -1,9 +1,9 @@
 plugins {
-    `java-library`
     checkstyle // https://docs.gradle.org/current/userguide/checkstyle_plugin.html
     jacoco
     id("com.diffplug.spotless")
     id("org.graalvm.buildtools.native")
+    id("io.micronaut.library")
 }
 group = project.findProperty("mavenGroup") as String
 version = project.findProperty("projectVersion") as String
@@ -11,14 +11,16 @@ repositories {
     mavenCentral()
 }
 val micronautVersion: String by project
+micronaut {
+    version.set(micronautVersion)
+    processing {
+        module.set(project.name)
+        group.set(project.findProperty("mavenGroup") as String)
+        incremental.set(true)
+        annotations.add("${project.findProperty("mavenGroup") as String}.*")
+    }
+}
 dependencies {
-    annotationProcessor(platform("io.micronaut.platform:micronaut-platform:${micronautVersion}"))
-    annotationProcessor("io.micronaut:micronaut-inject-java")
-    implementation(platform("io.micronaut.platform:micronaut-platform:${micronautVersion}"))
-    implementation("io.micronaut:micronaut-inject")
-    testAnnotationProcessor(platform("io.micronaut.platform:micronaut-platform:${micronautVersion}"))
-    testAnnotationProcessor("io.micronaut:micronaut-inject-java")
-    testImplementation(platform("io.micronaut.platform:micronaut-platform:${micronautVersion}"))
     // Logging
     testRuntimeOnly("ch.qos.logback:logback-classic")
 
