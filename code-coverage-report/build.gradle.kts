@@ -8,7 +8,6 @@ repositories {
 }
 
 dependencies {
-    jacocoAggregation(project(":lib"))
     jacocoAggregation(project(":bootstrap"))
 }
 

@@ -1,6 +1,5 @@
 rootProject.name = "MicronautLibrary"
 
-include("lib")
 include("bootstrap")
 include("code-coverage-report")
 
