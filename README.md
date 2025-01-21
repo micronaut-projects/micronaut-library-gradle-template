@@ -19,6 +19,10 @@ The template applies the [JaCoCo Gradle Plugin](https://docs.gradle.org/current/
 
 Run `./gradlew testCodeCoverageReport` and you can access the HTML report ` open code-coverage-report/build/reports/jacoco/testCodeCoverageReport/html/index.html`.
 
+## GraalVM Native Image
+
+The template applies the [Gradle Build Native Image Plugin](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html). You can run the Gradle task `./gradlew nativeTest` to ensure your library is compatible with Native Image.  
+
 ## Publish to Sonatype OSSRH (OSS Repository Hosting)
 
 ### GPG Key

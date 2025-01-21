@@ -2,7 +2,7 @@ plugins {
     `java-library`
     jacoco
     id("com.diffplug.spotless")
-
+    id("org.graalvm.buildtools.native")
 }
 group = project.findProperty("mavenGroup") as String
 version = project.findProperty("projectVersion") as String
