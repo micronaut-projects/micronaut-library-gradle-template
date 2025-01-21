@@ -6,10 +6,7 @@ plugins {
     id("io.micronaut.library")
 }
 
-
-val micronautVersion: String by project
 micronaut {
-    version.set(micronautVersion)
     processing {
         module.set(project.name)
         group.set(project.findProperty("mavenGroup") as String)
