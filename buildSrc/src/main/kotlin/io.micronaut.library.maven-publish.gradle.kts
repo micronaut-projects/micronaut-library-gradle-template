@@ -1,15 +1,16 @@
 plugins {
-    id("io.micronaut.library.micronaut-java-library")
+    id("io.micronaut.java-base")
     `maven-publish` // https://docs.gradle.org/current/userguide/publishing_maven.html
     signing // https://docs.gradle.org/current/userguide/signing_plugin.html
 }
-java {
-    withJavadocJar()
-    withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
+
 publishing {
+    repositories {
+        maven {
+            name = "build"
+            url = uri(rootProject.layout.buildDirectory.dir("repo"))
+        }
+    }
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
@@ -40,6 +41,8 @@ publishing {
         }
     }
 }
-signing {
-    sign(publishing.publications["mavenJava"])
+if (!version.toString().endsWith("SNAPSHOT")) {
+    signing {
+        sign(publishing.publications["mavenJava"])
+    }
 }
