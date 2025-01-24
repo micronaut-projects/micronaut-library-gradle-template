@@ -14,6 +14,10 @@ Modify `gradle.properties`. Change `TODO` items with your project details.
 
 You define the version of [Micronaut Platform](https://micronaut-projects.github.io/micronaut-platform/latest/guide/) in `micronautVersion` in `gradle/libs.versions.toml`.
 
+### Micronaut Gradle Plugin
+
+You define the version of [Micronaut Gradle Plugin](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/index.html) in `micronaut-gradle-plugin` in `gradle/libs.versions.toml` and in `settings.gradle.kts`.
+
 ## Example
 
 This repository contains a module named `example-micronaut-lib`. It is an example of a Micronaut library which exposes introspected classes, a `@Singleton` `PaginationFactory` and configuration bean `PaginationConfiguration` with a default value defined in `PaginationConfigurationProperties`.
