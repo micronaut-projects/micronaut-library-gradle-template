@@ -12,7 +12,7 @@ Modify `gradle.properties`. Change `TODO` items with your project details.
 
 ### Micronaut Version
 
-You define the version of [Micronaut Platform](https://micronaut-projects.github.io/micronaut-platform/latest/guide/) in `micronautVersion` in `gradle.properties`.
+You define the version of [Micronaut Platform](https://micronaut-projects.github.io/micronaut-platform/latest/guide/) in `micronautVersion` in `gradle/libs.versions.toml`.
 
 ## Example
 
