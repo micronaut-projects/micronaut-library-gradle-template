@@ -34,7 +34,7 @@ This template applies the [Micronaut Version Catalogue](https://micronaut-projec
 
 You can write the library documentation with [Asciidoc](https://docs.asciidoctor.org/asciidoc/latest/). 
 
-The submodule `docs` applies the [https://asciidoctor.github.io/asciidoctor-gradle-plugin/master/user-guide/) to generate HTML documentation.
+The submodule `docs` applies the [Asciidoc Gradle Plugin](https://asciidoctor.github.io/asciidoctor-gradle-plugin/master/user-guide/) to generate HTML documentation.
 
 `./gradlew :docs:asciidoctor`
 
