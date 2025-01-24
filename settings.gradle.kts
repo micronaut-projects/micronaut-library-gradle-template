@@ -5,4 +5,5 @@ plugins {
 rootProject.name = "MicronautLibrary"
 
 include("example-micronaut-lib")
+include("docs")
 include("code-coverage-report")
