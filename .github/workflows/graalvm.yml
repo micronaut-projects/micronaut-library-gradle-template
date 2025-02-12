@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: graalvm/setup-graalvm@v1.2.8 # https://github.com/graalvm/setup-graalvm
+      - uses: graalvm/setup-graalvm@v1.3.0 # https://github.com/graalvm/setup-graalvm
         with:
           java-version: '21'
           distribution: 'graalvm'
